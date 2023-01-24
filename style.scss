@@ -1,0 +1,91 @@
+$primary: #0a0c37;
+$secondary: #f8ff93;
+$ternary: #ff61c6;
+$quaternary: #5cecff;
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: silver;
+}
+.cv {
+  background-color: white;
+  margin: 20px auto;
+  box-shadow: 0 10px 20px black;
+  display: flex;
+  width: 21cm;
+  height: 29.7cm;
+  line-height: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gauche,
+.droite {
+  padding: 1cm;
+}
+.gauche {
+  padding-right: 0.5cm;
+  background-color: $primary;
+  color: $secondary;
+  width: 6.5cm;
+  flex-shrink: 0;
+}
+.photo {
+  width: 4.5cm;
+  height: 4.5cm;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5%;
+  background: linear-gradient(45deg, $ternary, $quaternary);
+  img {
+    width: 100%;
+    border-radius: 5%;
+  }
+}
+h1 {
+  font-size: 1.6em;
+  margin-top: 0;
+}
+.droite {
+  padding-left: 0.5cm;
+  background-color: beige;
+}
+.droite h2 {
+  border-top: 2px solid $primary;
+  padding-top: 10px;
+}
+.address {
+  display: inline-block;
+  vertical-align: top;
+}
+.droite {
+  em {
+    opacity: 60%;
+  }
+  strong {
+    color: $primary;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: [first] max-content [sep] auto [end];
+  }
+  dd {
+    grid-column-start: sep;
+    grid-column-end: end;
+    margin-left: 10px;
+  }
+  dt {
+    grid-column-start: first;
+    grid-column-end: sep;
+    text-align: right;
+  }
+}
+
+/*
+ <> chevron
+ [] crochets
+ {} acolades
+ "" guilements
+ _ underscore
+ - tiret
+ ~ tilde
+*/
